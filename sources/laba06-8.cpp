@@ -6,9 +6,9 @@
 #include <cstdlib>
 using namespace std;
 
-void cons(set<int>& st)
+void cons(set<int>& st, const int count)
 {
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < count; i++) {
         st.insert(rand() % 100);
     }
 }
@@ -19,7 +19,7 @@ int main()
     setlocale(LC_ALL, "Russian");
     set<int> mySet;
 
-    cons(mySet);
+    cons(mySet, 10);
 
     cout << "Элементы множества: ";
     copy(mySet.begin(), mySet.end(), ostream_iterator<int>(cout, " "));
@@ -42,9 +42,9 @@ int main()
     copy(mySet.begin(), mySet.end(), ostream_iterator<int>(cout, " "));
 
     set<int> s1;
-    cons(s1);
+    cons(s1, 10);
     set<int> s2;
-    cons(s2);
+    cons(s2, 10);
     std::vector<int> v_intersection;
     std::vector<int> v_union;
     std::vector<int> v_difference;
