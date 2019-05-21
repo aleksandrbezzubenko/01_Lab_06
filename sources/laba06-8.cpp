@@ -21,24 +21,24 @@ int main()
 
     cons(mySet);
 
-    cout << "İëåìåíòû ìíîæåñòâà: ";
+    cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹ Ğ¼Ğ½Ğ¾Ğ¶ĞµÑÑ‚Ğ²Ğ°: ";
     copy(mySet.begin(), mySet.end(), ostream_iterator<int>(cout, " "));
 
     int del = 0;
-    cout << "\nÊàêîé ıëåìåíò óäàëèòü? ";
+    cout << "\nĞšĞ°ĞºĞ¾Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ? ";
     cin >> del;
 
-    cout << "İëåìåíò " << *mySet.find(del) << " - óäàëåí!" << endl;
+    cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚ " << *mySet.find(del) << " - ÑƒĞ´Ğ°Ğ»ĞµĞ½!" << endl;
     mySet.erase(del);
 
     int add = 0;
-    cout << "Êàêîé ıëåìåíò äîáàâèòü? ";
+    cout << "ĞšĞ°ĞºĞ¾Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ¸Ñ‚ÑŒ? ";
     cin >> add;
 
-    cout << "Íîâûé ıëåìåíò äîáàâëåí íà ìåñòî ñòàğîãî - " << *mySet.lower_bound(add) << endl;
+    cout << "ĞĞ¾Ğ²Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½ Ğ½Ğ° Ğ¼ĞµÑÑ‚Ğ¾ ÑÑ‚Ğ°Ñ€Ğ¾Ğ³Ğ¾ - " << *mySet.lower_bound(add) << endl;
     mySet.insert(add);
 
-    cout << "Ìû óäàëèëè ıëåìåíò " << del << " è äîáàâèëè " << add << ".\nÂîò ÷òî ïîëó÷èëîñü: " << endl;
+    cout << "ĞœÑ‹ ÑƒĞ´Ğ°Ğ»Ğ¸Ğ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ " << del << " Ğ¸ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ¸Ğ»Ğ¸ " << add << ".\nĞ’Ğ¾Ñ‚ Ñ‡Ñ‚Ğ¾ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ğ»Ğ¾ÑÑŒ: " << endl;
     copy(mySet.begin(), mySet.end(), ostream_iterator<int>(cout, " "));
 
     set<int> s1;
